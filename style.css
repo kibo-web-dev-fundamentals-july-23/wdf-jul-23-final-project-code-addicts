@@ -11,6 +11,7 @@
     --text: #f8f5fc;
     --light-gray: #6d757e;
     --primary-gray: #2a323c;
+    --light-red: #ff4242;
 }
 
 body {
@@ -96,6 +97,89 @@ p {
     background-color: var(--light-gray);
 }
 
+/* Calculate age page -- Start */
+#calculate .wrapper {
+    height: 640px;
+    width: 730px;
+    margin: 0 auto;
+    background-color: var(--primary-gray);
+    border-radius: 24px;
+    padding: 58px;
+}
+.input-container {
+    display: flex;
+    /* gap: 35px; */
+    justify-content: space-between;
+    /* margin-bottom: 48px; */
+}
+label > * {
+    display: block;
+}
+
+label span {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--light-gray);
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+}
+
+label input {
+    width: 160px;
+    padding: 20px;
+    font-size: 32px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 800;
+    background: transparent;
+    color: var(--light-gray);
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
+    outline: none;
+}
+label input::placeholder {
+    color: var(--light-gray);
+}
+
+label input:focus {
+    border-color: var(--dark-gray);
+    border-width: 2px;
+}
+
+label .error {
+    color: var(--light-red);
+    font-style: italic;
+    font-size: 14px;
+}
+
+.input-container.error label span {
+    color: var(--light-red);
+}
+.input-container.error label input {
+    border: 1px solid var(--light-red);
+}
+
+.btn-secondary {
+    margin: 20px 0 !important;
+    background-color: var(--dark-gray);
+    color: var(--text);
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease-in;
+}
+
+.btn-secondary:hover {
+    background-color: #0f1216;
+}
+
+.result-container div {
+    font-size: 6.5rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 1;
+    color: var(--text);
+}
+/* Calculate age page -- Ends */
+
 @media screen and (max-width: 600px) {
     .container {
         flex-direction: column;
@@ -121,5 +205,29 @@ p {
         display: block;
         text-align: center;
         margin: 0 auto;
+    }
+    #calculate.container{
+      flex-direction: row;
+    }
+    #calculate .wrapper {
+        height: fit-content;
+        padding: 32px 24px;
+    }
+
+    label span {
+        font-size: 0.75rem;
+    }
+    label .error {
+        margin-top: 0.5rem;
+        font-size: 0.65rem;
+    }
+    label input {
+        width: 80%;
+        padding: 12px 10px;
+        font-size: 16px;
+    }
+    .result-container div {
+        font-size: 3.5rem;
+        line-height: 1.25;
     }
 }
