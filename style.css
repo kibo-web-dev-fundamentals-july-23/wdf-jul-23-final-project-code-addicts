@@ -231,7 +231,7 @@ label .error {
         font-size: 0.65rem;
     }
     label input {
-        width: 80%;
+        width: 80px;
         padding: 12px 10px;
         font-size: 16px;
     }
