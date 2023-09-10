@@ -141,6 +141,14 @@ label input::placeholder {
     color: var(--light-gray);
 }
 
+input[type="number"]::-webkit-inner-spin-button{
+    display: none;
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
 label input:focus {
     border-color: var(--dark-gray);
     border-width: 2px;
