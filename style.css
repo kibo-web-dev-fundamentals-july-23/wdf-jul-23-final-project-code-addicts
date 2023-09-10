@@ -19,7 +19,6 @@ body {
     background-color: var(--dark-gray);
 }
 
-
 .container {
     margin: auto;
     max-width: 80%;
@@ -141,11 +140,11 @@ label input::placeholder {
     color: var(--light-gray);
 }
 
-input[type="number"]::-webkit-inner-spin-button{
+input[type="number"]::-webkit-inner-spin-button {
     display: none;
 }
 
-input[type="number"]{
+input[type="number"] {
     -moz-appearance: textfield;
 }
 
@@ -215,8 +214,8 @@ label .error {
         text-align: center;
         margin: 0 auto;
     }
-    #calculate.container{
-      flex-direction: row;
+    #calculate.container {
+        flex-direction: row;
     }
     #calculate .wrapper {
         height: fit-content;
